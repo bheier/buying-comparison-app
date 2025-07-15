@@ -2,6 +2,11 @@ import streamlit as st
 import yfinance as yf
 import pandas as pd
 
+from model.forecast import forecast_returns
+returns = forecast_returns("AAPL")
+st.write("Forecasted Annual Returns:", returns)
+
+
 st.set_page_config(page_title="Buying Comparison App", layout="wide")
 st.title("📊 Buying Comparison App")
 
